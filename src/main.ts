@@ -9,6 +9,9 @@ async function bootstrap() {
       whitelist: true,
       transform: true,
       forbidNonWhitelisted: true,
+      transformOptions: {
+        enableImplicitConversion: true, // Prevent use the type decorator
+      },
     }),
   );
   await app.listen(3000);
